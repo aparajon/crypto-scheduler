@@ -4,8 +4,8 @@ from aws_cdk import core
 
 from crypto_scheduler.crypto_scheduler_stack import CryptoSchedulerStack
 
-
 app = core.App()
-CryptoSchedulerStack(app, "crypto-scheduler")
+
+CryptoSchedulerStack(app, "crypto-scheduler", env={'region': 'us-west-2'})
 
 app.synth()
